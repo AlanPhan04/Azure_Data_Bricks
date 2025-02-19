@@ -1,0 +1,13 @@
+- Databricks Notebooks: A collection of cells that runs commands on Databricks Cluster
+
+------------------------------------------------------------------------------------------------------------------------
+
+- Magic Commands: Change commands from this programming language to another
+
+------------------------------------------------------------------------------------------------------------------------
+
+- Databricks Utilities: Combine different tasks into a single notebook (file operation tasks with ETL tasks)
+    + File System Ultilities
+    + Secrets Utilities
+    + Widget Utilities
+    + Notebook Workflow Utilities

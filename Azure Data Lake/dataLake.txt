@@ -1,0 +1,34 @@
+Target: Learn how to access Data Lake Storage
+    + Create ADLS
+    + Access DL using Access Keys
+    + Access DL using SAS Token
+    + Access DL using Service Principal
+    + Using Cluster Scoped Authentication
+    + Access DL using AAD Credential Pass-through
+    + Recommened approach for the course
+
+------------------------------------------------------------------------------------------------------------------------
+
+- In order to access the Azure Data Lake Storage (ADLS)
+    + Storage Access Keys (Each account)
+    + Shared Access Signature (SAS Token) (can custom)
+    + Service Principal: Create this to manage access to the ADLS
+
+- There are two types of Scoped Authentication:
+    + Session Scoped Authentication: Use the credentials in the notebook and authenticate to the Data Lake, authenticate until the notebook is detached from the cluster
+    + Cluster Scoped Authentication: Use the credentials in the notebook and authenticate from the cluster, authenticate the cluster is terminated
+
+- There are other kinds of authentication: (Learn Later)
+    + AAD Passthrough Authentication
+    + Unity Catalog
+
+------------------------------------------------------------------------------------------------------------------------
+
+- Authenticate using Access Keys:
+    + Each storage account comes with 2 keys (Why???)
+    + Gives full Access to the storage account
+    + Keys can be rotated (regenerated)
+
+- Assign a key access to the Azure Databricks through Spark Configuration
+
+- 
