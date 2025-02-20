@@ -31,4 +31,25 @@ Target: Learn how to access Data Lake Storage
 
 - Assign a key access to the Azure Databricks through Spark Configuration
 
-- 
+------------------------------------------------------------------------------------------------------------------------
+
+- Authenticate ussing SAS Token:
+    + Provides fine grained access to the storage
+    + Restrict access to specific resource types / services
+    + Allow specific permissions
+    + Restrict access to specific time period
+    + Limit access to specific IP addresses
+    + Recommended access pattern for external clients
+
+------------------------------------------------------------------------------------------------------------------------
+
+- Authenticate using Service Principal: Similar to the user account
+    + Register Azure AD Application / Service Principal -> Unique ID (Application/ClientID)
+    + Generate a secret / password for the Application
+    + Set Spark Config with App / Client Id, Directory / Tenant Id & Secret
+    + Assign Role Storage Blob Data Contributor to the Data Lake
+
+------------------------------------------------------------------------------------------------------------------------
+
+- AAD Passthrough Authentication:
+    + Assign permissions for each user
