@@ -1,0 +1,44 @@
+Databricks Mounts
+    + What is Databricks File System (DBFS)
+    + What are Databricks Mounts
+    + Mount ADLS container to Databricks
+
+------------------------------------------------------------------------------------------------------------------------
+
+Databricks File System (DBFS)
+
+- Azure Blob Storage mount to the DBFS 
+- DBFS is a distributed file system mounted on the Databricks workspace
+- Key takeaway: DBFS is just a file system that help access into distributed data in Azure Storage, it's not a storage solution
+
+- DBFS Root is the default storage for a Databricks workspace created during workspace deployment
+    + Backed by the default Azure Blob Storage
+    + Can be accessed via the web UI 
+    + Query results are stored here
+    + Default storage location for managed tables
+    + Default storage location, but not recommended for user data
+        drop workspace -> drop data as well
+        -> Where to put user data?
+
+------------------------------------------------------------------------------------------------------------------------
+
+--> Answer: Store user data in their Azure Blob Storage or ADLS
+-> How to connect storage?
+-> Can use previous protocols
+-> Cons: 
+    + Deal with long DBFS URLs
+    + Use credentials to authenticate the storage account before accessing data from them
+-> Solution: 
+    + Mount these storage accounts to the DBFS; 
+    + Specify the credential when the storage is mounted
+    + Once it is mounted, each user that has access to the workspace can access the data without providing credentials
+-> Benefits:
+    + Access data without requiring credentials
+    + Access files using file semantics rather than storage URLs (e.g. mnt/storage1)
+    + Stores files to object storage (e.g. Azure Blob), so you get all the benefits from Azure
+
+-> Until 2022, Azure introduces Unity Catalog: Automatically do the credentials
+
+
+
+    
