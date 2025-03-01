@@ -1,0 +1,15 @@
+- Target:
+# Various data loading design pattern: Full Refresh, Incremental Load, Hybrid Approaches
+# F1 Project Load pattern
+# Implementation
+
+------------------------------------------------------------------------------------------------------------------------
+
+- Data Load Types:
++ Full Load: Process all data (Only for small dataset)
++ Incremental Load: Process little data that are changed between the previous run and current run (ETL pipelines)
++ Hybrid Scenarios:
+++ Full Dataset received, but data loaded and transformed incrementally
+++ Incremental dataset received, but data loaded and transformed in full
+++ Data received contains both full and incremental files
+++ Incremental data received. Ingested incrementally and transformed is full
