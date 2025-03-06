@@ -1,0 +1,33 @@
+# Pitfalls of Data Lakes
+# Lakehouse Architecture
+# Delta Lake Capabilities
+# Convert F1 project to Delta Lake
+
+
+
+-----------------------------------------------------------------------------
+
+# Data Warehouse
+
+- Lack of support for unstructured data
+- Longer to ingest new data
+- Proprietary data formats
+- Scalability
+- Expensive to store data
+- Lack of support for ML/AI workloads
+
+-----------------------------------------------------------------------------
+
+# Data Lake
+
+- No support for ACID transactions
+- Failed jobs leave partial files
+- Inconsistent reads
+- Unable to handle corrections to data
+- Unable to roll back any data
+- Lack of ability remove data for GDPR etc
+- No history or versioning
+- Poor performance
+- Poor BI support
+- Complex to set-up
+- Lambda architecture for streaming workloads
