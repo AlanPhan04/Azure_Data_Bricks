@@ -1,0 +1,33 @@
+# Unity Catalog: Used to share data across workspaces
+
+- A unified data governance solutiom designed to manage, secure, and monitor data across multiple Databricks workspaces, users, and clouds
+- Centralized platform for data access control, lineage tracking, and compliance auditing
+
+# Key Features of Unity Catalog
+
+- Centralized governance
+- Fine-grained accecss control
+- Data lineage
+- Cross-cloud collaboration
+- Unified metadata management
+- Audit logging
+- Open format support
+
+# Hierarchy in Unity Catalog
+
+- Metastore
+- Catalogs
+- Schemas
+- Tables and Views
+
+# Benefits
+
+- Enterprise-wide data governance
+- Data lineage for impact analysis
+- Cross-team collaboration
+- Regulatory compliance
+
+# Limitations
+
+- Complex initial setup
+- Region-specific metastore

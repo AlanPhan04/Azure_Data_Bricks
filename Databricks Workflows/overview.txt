@@ -3,3 +3,24 @@ Databricks Workflows:
     + Defining notebook parameters
     + Notebook workflow
     + Databricks Jobs
+
+* Definition:
+
+- An orchestrated sequence of tasks that automates and manages data pipelines, machine learning workflows, and other jobs
+- Schedule, chain, and monitor tasks
+
+* Key Components of Workflows:
+
+- Tasks: Smallest unit of work that you want to execute
+- Dependencies: Task A must be done before the execution of task B
+- Cluster management
+- Parameters
+- Monitoring and logging: Do stuffs on monitoring (Ex. Retry if the first try fails)
+
+* Benefits of Workflows in Databricks
+
+- Task orchestration
+- Automation
+- Resource optimization
+- Error handling
+- Visibility and monitoring

@@ -31,3 +31,46 @@
 - Poor BI support
 - Complex to set-up
 - Lambda architecture for streaming workloads
+
+-----------------------------------------------------------------------------
+
+# Delta Lake
+
+- Data reliability: ACID transactions
+- Schema flexibility: enforce and evolve schemas
+- Time travel: query historical versions
+- Query performance: file compaction and Z-ordering
+- Upserts and deletes
+
+    * Use Cases
+
+    - ETL Pipelines: reliable data ingestion with ACID guarantees
+    - Streaming and batch: unified processing for real-time and historical data
+    - Data warehousing: supports complex queries and analytics
+
+* Create a Delta Table:
+df.write.mode("Overwrite").format("delta").saveAsTable("<DB Name>.<Table Name>")
+
+* Upserts and deletes
+    ### Insert a new row:
+    df1 = spark.sql("INSERT INTO <Table Name> VALUES ()")
+    display(df1) # return 2 columns, num_affected_ rows, num_inserted_rows
+
+    ### Update table:
+    spark.sql("UPDATE <Table Name> SET customer_type = 'Regular' WHERE customer_id = 1001")
+
+    ### Delete table:
+    spark.sql("DELETE FROM <Table Name> WHERE customer_id = 1001")
+
+* Time travel:
+    display(spark.sql("describe history customer_delta"))
+    
+    ### See the data of a specific version
+    df2 = spark.sql("SELECT * FROM customer_delta VERSION AS OF <version>")
+    
+    ### See the data of a specific timestamp
+    df3 = spark.sql("SELECT * FROM customer_delta TIMESTAMP AS OF <timestamp>")
+
+    ### Restore data from a specific version
+    spark.sql("RESTORE customer_delta TO VERSION AS OF <version>")  # Update on the table
+
